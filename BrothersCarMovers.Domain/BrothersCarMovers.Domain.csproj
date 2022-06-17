@@ -16,4 +16,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BrothersCarMovers.Entities\BrothersCarMovers.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

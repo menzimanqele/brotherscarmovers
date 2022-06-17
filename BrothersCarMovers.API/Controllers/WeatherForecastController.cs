@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BrothersCarMovers.Common;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +19,12 @@ namespace BrothersCarMovers.API.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly Config _config;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IOptions<Config> configSettings)
         {
             _logger = logger;
+            
         }
 
         [HttpGet]

@@ -4,14 +4,16 @@ using BrothersCarMovers.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BrothersCarMovers.Data.Migrations
 {
     [DbContext(typeof(BrothersCarMoversDataContext))]
-    partial class BrothersCarMoversDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220617130042_Update_Table_Names")]
+    partial class Update_Table_Names
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,42 +56,11 @@ namespace BrothersCarMovers.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDateTime = new DateTime(2022, 6, 17, 17, 22, 48, 730, DateTimeKind.Local).AddTicks(6406),
-                            Description = "Driver",
-                            Title = "Driver"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDateTime = new DateTime(2022, 6, 17, 17, 22, 48, 731, DateTimeKind.Local).AddTicks(3752),
-                            Description = "Client",
-                            Title = "Client"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreateDateTime = new DateTime(2022, 6, 17, 17, 22, 48, 731, DateTimeKind.Local).AddTicks(3779),
-                            Description = "Admin",
-                            Title = "Admin"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreateDateTime = new DateTime(2022, 6, 17, 17, 22, 48, 731, DateTimeKind.Local).AddTicks(3781),
-                            Description = "Manager",
-                            Title = "Manager"
-                        });
                 });
 
             modelBuilder.Entity("BrothersCarMovers.Entities.User", b =>
@@ -117,6 +88,9 @@ namespace BrothersCarMovers.Data.Migrations
                     b.Property<bool?>("IsSynced")
                         .HasColumnType("bit");
 
+                    b.Property<int>("JobTitleId")
+                        .HasColumnType("int");
+
                     b.Property<Guid?>("LastSyncClient")
                         .HasColumnType("uniqueidentifier");
 
@@ -130,16 +104,13 @@ namespace BrothersCarMovers.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RoleId");
+                    b.HasIndex("JobTitleId");
 
                     b.ToTable("Users");
                 });
@@ -287,13 +258,13 @@ namespace BrothersCarMovers.Data.Migrations
 
             modelBuilder.Entity("BrothersCarMovers.Entities.User", b =>
                 {
-                    b.HasOne("BrothersCarMovers.Entities.Role", "Role")
+                    b.HasOne("BrothersCarMovers.Entities.Role", "JobTitle")
                         .WithMany("Users")
-                        .HasForeignKey("RoleId")
+                        .HasForeignKey("JobTitleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Role");
+                    b.Navigation("JobTitle");
                 });
 
             modelBuilder.Entity("BrothersCarMovers.Entities.VehicleModel", b =>

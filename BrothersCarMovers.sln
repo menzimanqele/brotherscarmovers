@@ -13,13 +13,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{A670866F-E21
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{3E704A35-95BA-45F8-A409-40E13F6B3537}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrothersCarMovers.Entities", "BrothersCarMovers.Entities\BrothersCarMovers.Entities.csproj", "{C1336587-6A11-49FF-BB4F-53AAEE5399A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrothersCarMovers.Entities", "BrothersCarMovers.Entities\BrothersCarMovers.Entities.csproj", "{C1336587-6A11-49FF-BB4F-53AAEE5399A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrothersCarMovers.Domain", "BrothersCarMovers.Domain\BrothersCarMovers.Domain.csproj", "{38AED802-93D5-40F3-9BE5-4C5EE03D06B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrothersCarMovers.Domain", "BrothersCarMovers.Domain\BrothersCarMovers.Domain.csproj", "{38AED802-93D5-40F3-9BE5-4C5EE03D06B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrothersCarMovers.Data", "BrothersCarMovers.Data\BrothersCarMovers.Data.csproj", "{3D8C1713-F7DB-46BF-8281-B681C8903D37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrothersCarMovers.Data", "BrothersCarMovers.Data\BrothersCarMovers.Data.csproj", "{3D8C1713-F7DB-46BF-8281-B681C8903D37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrothersCarMovers.API", "BrothersCarMovers.API\BrothersCarMovers.API.csproj", "{F8A96009-BFC2-4C16-8027-466883ADEF53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrothersCarMovers.API", "BrothersCarMovers.API\BrothersCarMovers.API.csproj", "{F8A96009-BFC2-4C16-8027-466883ADEF53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{AECB0A20-6D8D-4A09-8903-05171F182B6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrothersCarMovers.Common", "BrothersCarMovers.Common\BrothersCarMovers.Common.csproj", "{1595322B-AB15-49BB-8E53-36FAD1D3CBC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mapper", "Mapper", "{1CB0DA53-2728-41EE-BEC3-D93DAA713949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrothersCarMovers.Mapper", "BrothersCarMovers.Mapper\BrothersCarMovers.Mapper.csproj", "{57AFD788-34AF-4560-B046-D67AAC8FE064}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{A8C9AAFA-382F-44C3-A51F-014A08DB7D21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrothersCarMovers.IoC", "BrothersCarMovers.IoC\BrothersCarMovers.IoC.csproj", "{BF9DEC62-26D0-4017-9902-E44CB655DC13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +55,18 @@ Global
 		{F8A96009-BFC2-4C16-8027-466883ADEF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8A96009-BFC2-4C16-8027-466883ADEF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8A96009-BFC2-4C16-8027-466883ADEF53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1595322B-AB15-49BB-8E53-36FAD1D3CBC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1595322B-AB15-49BB-8E53-36FAD1D3CBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1595322B-AB15-49BB-8E53-36FAD1D3CBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1595322B-AB15-49BB-8E53-36FAD1D3CBC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57AFD788-34AF-4560-B046-D67AAC8FE064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57AFD788-34AF-4560-B046-D67AAC8FE064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57AFD788-34AF-4560-B046-D67AAC8FE064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57AFD788-34AF-4560-B046-D67AAC8FE064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF9DEC62-26D0-4017-9902-E44CB655DC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9DEC62-26D0-4017-9902-E44CB655DC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9DEC62-26D0-4017-9902-E44CB655DC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9DEC62-26D0-4017-9902-E44CB655DC13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +76,9 @@ Global
 		{38AED802-93D5-40F3-9BE5-4C5EE03D06B6} = {0D264B56-C587-4BAC-87A6-74DDAC45B548}
 		{3D8C1713-F7DB-46BF-8281-B681C8903D37} = {364D578D-F67B-45CD-B29B-E6EC0EDEC689}
 		{F8A96009-BFC2-4C16-8027-466883ADEF53} = {A670866F-E21C-42F3-8A69-3C712B3684E5}
+		{1595322B-AB15-49BB-8E53-36FAD1D3CBC9} = {AECB0A20-6D8D-4A09-8903-05171F182B6F}
+		{57AFD788-34AF-4560-B046-D67AAC8FE064} = {1CB0DA53-2728-41EE-BEC3-D93DAA713949}
+		{BF9DEC62-26D0-4017-9902-E44CB655DC13} = {A8C9AAFA-382F-44C3-A51F-014A08DB7D21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94BC6023-8594-4F1C-AB87-C186BD857441}

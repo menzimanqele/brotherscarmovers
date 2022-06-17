@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
       <PrivateAssets>all</PrivateAssets>
@@ -18,9 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BrothersCarMovers.Common\BrothersCarMovers.Common.csproj" />
     <ProjectReference Include="..\BrothersCarMovers.Data\BrothersCarMovers.Data.csproj" />
     <ProjectReference Include="..\BrothersCarMovers.Domain\BrothersCarMovers.Domain.csproj" />
     <ProjectReference Include="..\BrothersCarMovers.Entities\BrothersCarMovers.Entities.csproj" />
+    <ProjectReference Include="..\BrothersCarMovers.IoC\BrothersCarMovers.IoC.csproj" />
   </ItemGroup>
 
 

@@ -1,4 +1,6 @@
+using BrothersCarMovers.Common;
 using BrothersCarMovers.Data.Context;
+using BrothersCarMovers.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,7 +24,7 @@ namespace BrothersCarMovers.API
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; set; }
         private readonly string BrothersCarMovers = "BrothersCarMovers";
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -40,6 +42,14 @@ namespace BrothersCarMovers.API
             {
                 options.UseSqlServer(Configuration.GetConnectionString("BrothersCarMoversDataContext"));
             });
+
+            services.Configure<Config>(Configuration.GetSection("AppSettings"));
+            RegisterServices(services);
+        }
+
+        private void RegisterServices(IServiceCollection services)
+        {
+            DependancyContainer.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +59,11 @@ namespace BrothersCarMovers.API
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            var builder = new ConfigurationBuilder().
+               SetBasePath(env.ContentRootPath)
+               .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            Configuration = builder.Build();
 
             app.UseHttpsRedirection();
 

@@ -7,15 +7,14 @@ using System.Text;
 
 namespace BrothersCarMovers.Entities
 {
-    public class Employee : BaseSyncEntity
+    public class FileRelatedType : BaseSyncEntity
     {
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
-        public string Surname { get; set; }
-        public int ImageID { get; set; }
-        public int JobTitleId { get; set; }
-        public JobTitle JobTitle { get; set; }
+        public string Description { get; set; }
     }
 }

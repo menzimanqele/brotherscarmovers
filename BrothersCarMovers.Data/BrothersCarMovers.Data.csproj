@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BrothersCarMovers.Domain\BrothersCarMovers.Domain.csproj" />
     <ProjectReference Include="..\BrothersCarMovers.Entities\BrothersCarMovers.Entities.csproj" />
   </ItemGroup>
 

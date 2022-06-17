@@ -4,14 +4,16 @@ using BrothersCarMovers.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BrothersCarMovers.Data.Migrations
 {
     [DbContext(typeof(BrothersCarMoversDataContext))]
-    partial class BrothersCarMoversDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220617135113_Seed_Role_Data")]
+    partial class Seed_Role_Data
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -65,28 +67,25 @@ namespace BrothersCarMovers.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDateTime = new DateTime(2022, 6, 17, 17, 22, 48, 730, DateTimeKind.Local).AddTicks(6406),
+                            CreateDateTime = new DateTime(2022, 6, 17, 15, 51, 12, 853, DateTimeKind.Local).AddTicks(8752),
                             Description = "Driver",
                             Title = "Driver"
                         },
                         new
                         {
                             Id = 2,
-                            CreateDateTime = new DateTime(2022, 6, 17, 17, 22, 48, 731, DateTimeKind.Local).AddTicks(3752),
                             Description = "Client",
                             Title = "Client"
                         },
                         new
                         {
                             Id = 3,
-                            CreateDateTime = new DateTime(2022, 6, 17, 17, 22, 48, 731, DateTimeKind.Local).AddTicks(3779),
                             Description = "Admin",
                             Title = "Admin"
                         },
                         new
                         {
                             Id = 4,
-                            CreateDateTime = new DateTime(2022, 6, 17, 17, 22, 48, 731, DateTimeKind.Local).AddTicks(3781),
                             Description = "Manager",
                             Title = "Manager"
                         });

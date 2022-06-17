@@ -7,16 +7,18 @@ using System.Text;
 
 namespace BrothersCarMovers.Entities
 {
-    public class VehicleModel : BaseSyncEntity
+    public class User : BaseSyncEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public string Description { get; set; }
-        public int ManufactureId { get; set; }
-        public int Year { get; set; }
-        public VehicleManufacture VehicleManufacture { get; set; }
+        [Required]
+        public string Surname { get; set; }
+        public int ImageID { get; set; }
+        [Required]
+        public int RoleId { get; set; }
+        public Role Role { get; set; }
     }
 }
